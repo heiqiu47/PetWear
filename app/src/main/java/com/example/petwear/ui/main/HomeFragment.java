@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         initView(view);
-        //刷新
+        //TODO 刷新
         mSwipeRefresh.setColorSchemeResources(R.color.colorAccent);
         mSwipeRefresh.setOnRefreshListener(() -> refreshFruits());
         //点击宠物跳转至修改信息界面

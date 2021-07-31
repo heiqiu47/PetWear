@@ -21,7 +21,7 @@
             android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/pet_img"
+            android:id="@+id/img_pet"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
@@ -43,20 +43,20 @@
             android:textSize="20sp" />
 
         <RadioGroup
-            android:id="@+id/sex_group"
+            android:id="@+id/group_sex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/sex_0_radio"
+                android:id="@+id/radio_sex_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="雌" />
 
             <RadioButton
-                android:id="@+id/sex_1_radio"
+                android:id="@+id/radio_sex_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="雄" />
@@ -78,7 +78,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/pet_name_edit"
+            android:id="@+id/edit_pet_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -104,19 +104,19 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/pet_number_edit"
+            android:id="@+id/edit_pet_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@null"
             android:inputType="numberSigned"
             android:text="100001"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
     <Button
-        android:id="@+id/brn_update"
+        android:id="@+id/brn_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"

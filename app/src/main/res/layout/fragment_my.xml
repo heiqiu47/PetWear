@@ -7,18 +7,18 @@ android:layout_height="match_parent"
 tools:context=".ui.main.MyFragment">
 
 <ImageView
-    android:id="@+id/my_home_img"
+    android:id="@+id/img_user"
     android:layout_width="80dp"
     android:layout_height="80dp"
     android:src="@drawable/ic_baseline_person_24"
-    app:layout_constraintBottom_toTopOf="@+id/my_home_name"
+    app:layout_constraintBottom_toTopOf="@+id/text_name"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
 <TextView
-    android:id="@+id/my_home_name"
+    android:id="@+id/text_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="未登录"
@@ -26,7 +26,7 @@ tools:context=".ui.main.MyFragment">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/my_home_img" />
+    app:layout_constraintTop_toBottomOf="@+id/img_user" />
 
 <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline"
@@ -36,13 +36,13 @@ tools:context=".ui.main.MyFragment">
     app:layout_constraintGuide_percent="0.25" />
 
 <LinearLayout
-    android:id="@+id/my_home_info_li"
+    android:id="@+id/btn_info"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
     android:orientation="horizontal"
-    app:layout_constraintBottom_toTopOf="@+id/my_home_order_li"
+    app:layout_constraintBottom_toTopOf="@+id/btn_pets_list"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
@@ -63,25 +63,25 @@ tools:context=".ui.main.MyFragment">
 </LinearLayout>
 
 <LinearLayout
-    android:id="@+id/my_home_order_li"
+    android:id="@+id/btn_pets_list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
     android:layout_weight="1"
     android:orientation="horizontal"
-    app:layout_constraintBottom_toTopOf="@+id/my_home_password_li"
+    app:layout_constraintBottom_toTopOf="@+id/btn_password"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/my_home_info_li">
+    app:layout_constraintTop_toBottomOf="@+id/btn_info">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:text="订单列表"
+        android:text="宠物列表"
         android:textSize="24sp" />
 
     <ImageView
@@ -92,18 +92,18 @@ tools:context=".ui.main.MyFragment">
 </LinearLayout>
 
 <LinearLayout
-    android:id="@+id/my_home_password_li"
+    android:id="@+id/btn_password"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
     android:layout_weight="1"
     android:orientation="horizontal"
-    app:layout_constraintBottom_toTopOf="@+id/my_home_feedback"
+    app:layout_constraintBottom_toTopOf="@+id/btn_feedback"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/my_home_order_li">
+    app:layout_constraintTop_toBottomOf="@+id/btn_pets_list">
 
     <TextView
         android:layout_width="match_parent"
@@ -120,7 +120,7 @@ tools:context=".ui.main.MyFragment">
 </LinearLayout>
 
 <LinearLayout
-    android:id="@+id/my_home_feedback"
+    android:id="@+id/btn_feedback"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
@@ -131,7 +131,7 @@ tools:context=".ui.main.MyFragment">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.5"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/my_home_password_li">
+    app:layout_constraintTop_toBottomOf="@+id/btn_password">
 
     <TextView
         android:layout_width="match_parent"
@@ -154,17 +154,17 @@ tools:context=".ui.main.MyFragment">
     android:orientation="horizontal"
     app:layout_constraintGuide_percent="0.65" />
 
-<Button
-    android:id="@+id/my_home_button"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
-    android:text="退出账号"
-    android:layout_marginHorizontal="48dp"
-    app:layout_constraintBottom_toTopOf="@+id/guideline9"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+    <Button
+        android:id="@+id/btn_user_in_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        android:background="@color/colorPrimary"
+        android:text="登录"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
 <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline9"

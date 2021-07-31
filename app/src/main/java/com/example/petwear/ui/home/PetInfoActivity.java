@@ -1,6 +1,8 @@
 package com.example.petwear.ui.home;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petwear.R;
+import com.example.petwear.tool.PetTool;
 
 /**
  * 宠物信息修改
@@ -28,6 +31,7 @@ public class PetInfoActivity extends AppCompatActivity {
     private TextView mPetNumber;
     private Button mBrnUpdate;
     private Button mBtnDelete;
+    private String petType = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,16 @@ public class PetInfoActivity extends AppCompatActivity {
             supportActionBar.setTitle("信息修改");
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
+        //切换宠物类型（设置图片）
+        final String[] items = {"猫", "狗"};
+        AlertDialog.Builder listDialog = new AlertDialog.Builder(PetInfoActivity.this);
+        listDialog.setTitle("选择宠物类型");
+        listDialog.setItems(items, (dialog, which) -> {
+            petType = items[which];
+            mPetImg.setImageResource(PetTool.getPetImg(petType));
+        });
+        mPetImg.setOnClickListener(v -> listDialog.show());
+
         //TODO 修改宠物消息
         mBrnUpdate.setOnClickListener(v -> {
             Toast.makeText(this, "未保存成功", Toast.LENGTH_SHORT).show();

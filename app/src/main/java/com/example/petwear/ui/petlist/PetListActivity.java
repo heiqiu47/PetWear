@@ -1,5 +1,6 @@
 package com.example.petwear.ui.petlist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.petwear.R;
 import com.example.petwear.adapter.PetListAdapter;
 import com.example.petwear.bean.PetBean;
+import com.example.petwear.ui.home.PetInfoActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -27,6 +29,7 @@ public class PetListActivity extends AppCompatActivity {
     private FloatingActionButton mBtnAdd;
     private List<PetBean> petData = new ArrayList<>();
     private PetListAdapter petAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +48,20 @@ public class PetListActivity extends AppCompatActivity {
         mListPet.setAdapter(petAdapter);
         //TODO 宠物选择
         mListPet.setOnItemClickListener((parent, view, position, id) -> {
-            Toast.makeText(this, "选择未成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "未选择成功", Toast.LENGTH_SHORT).show();
             finish();
         });
-
+        //添加宠物
+        mBtnAdd.setOnClickListener(v -> startActivity(new Intent(this, PetAddActivity.class)));
     }
 
     //TODO 加载数据
     private void setData() {
-        petData.add(new PetBean(10001,"dog", "狗勾",1));
-        petData.add(new PetBean(10002,"dog", "小杰宝",0));
-        petData.add(new PetBean(10003,"dog", "正义",1));
-        petData.add(new PetBean(10004,"dog", "正义",0));
-        petData.add(new PetBean(10005,"dog", "正义",1));
+        petData.add(new PetBean(10001,"狗", "狗勾",1));
+        petData.add(new PetBean(10002,"猫", "小杰宝",0));
+        petData.add(new PetBean(10003,"狗", "正义",1));
+        petData.add(new PetBean(10004,"猫", "正义",0));
+        petData.add(new PetBean(10005,"狗", "正义",1));
     }
 
     @Override
