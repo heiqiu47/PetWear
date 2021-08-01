@@ -2,7 +2,9 @@ package com.example.petwear.tool;
 
 import com.example.petwear.R;
 
-public class PetTool {
+public class Utils {
+    public static int login = 0;
+
     public static int getPetImg(String petType) {
         int i = 0;
         switch (petType) {

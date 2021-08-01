@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petwear.R;
 
+/**
+ * 注册
+ */
 public class MyRegisterActivity extends AppCompatActivity {
 
     private EditText mEditUsername;

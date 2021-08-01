@@ -1,7 +1,6 @@
 package com.example.petwear.adapter;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import com.example.petwear.R;
 import com.example.petwear.bean.PetBean;
-import com.example.petwear.tool.PetTool;
+import com.example.petwear.tool.Utils;
 
 import java.util.List;
 
@@ -40,7 +39,7 @@ public class PetListAdapter extends ArrayAdapter<PetBean> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         PetBean item = getItem(position);
-        viewHolder.mPetImg.setImageResource(PetTool.getPetImg(item.getPetType()));
+        viewHolder.mPetImg.setImageResource(Utils.getPetImg(item.getPetType()));
         viewHolder.mPetName.setText(item.getPetName());
         viewHolder.mPetSex.setText(item.getPetSex() == 0 ? "雌" : "雄");
         return convertView;

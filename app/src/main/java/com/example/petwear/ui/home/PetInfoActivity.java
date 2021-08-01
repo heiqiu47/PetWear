@@ -14,7 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petwear.R;
-import com.example.petwear.tool.PetTool;
+import com.example.petwear.tool.Utils;
 
 /**
  * 宠物信息修改
@@ -49,7 +49,7 @@ public class PetInfoActivity extends AppCompatActivity {
         listDialog.setTitle("选择宠物类型");
         listDialog.setItems(items, (dialog, which) -> {
             petType = items[which];
-            mPetImg.setImageResource(PetTool.getPetImg(petType));
+            mPetImg.setImageResource(Utils.getPetImg(petType));
         });
         mPetImg.setOnClickListener(v -> listDialog.show());
 

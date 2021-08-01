@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petwear.R;
-import com.example.petwear.tool.PetTool;
+import com.example.petwear.tool.Utils;
 
 public class PetAddActivity extends AppCompatActivity {
 
@@ -44,7 +44,7 @@ public class PetAddActivity extends AppCompatActivity {
         listDialog.setTitle("选择宠物类型");
         listDialog.setItems(items, (dialog, which) -> {
             petType = items[which];
-            mImgPet.setImageResource(PetTool.getPetImg(petType));
+            mImgPet.setImageResource(Utils.getPetImg(petType));
         });
         mImgPet.setOnClickListener(v -> listDialog.show());
         //TODO 添加宠物数据
