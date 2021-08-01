@@ -44,7 +44,7 @@ public class PetListActivity extends AppCompatActivity {
         }
         //加载列表
         setData();
-        petAdapter = new PetListAdapter(PetListActivity.this,R.layout.item_pet_list, petData);
+        petAdapter = new PetListAdapter(PetListActivity.this, R.layout.item_pet_list, petData);
         mListPet.setAdapter(petAdapter);
         //TODO 宠物选择
         mListPet.setOnItemClickListener((parent, view, position, id) -> {
@@ -57,11 +57,11 @@ public class PetListActivity extends AppCompatActivity {
 
     //TODO 加载数据
     private void setData() {
-        petData.add(new PetBean(10001,"狗", "狗勾",1));
-        petData.add(new PetBean(10002,"猫", "小杰宝",0));
-        petData.add(new PetBean(10003,"狗", "正义",1));
-        petData.add(new PetBean(10004,"猫", "正义",0));
-        petData.add(new PetBean(10005,"狗", "正义",1));
+        petData.add(new PetBean(10001, "狗", "狗勾", 1));
+        petData.add(new PetBean(10002, "猫", "小杰宝", 0));
+        petData.add(new PetBean(10003, "狗", "正义", 1));
+        petData.add(new PetBean(10004, "猫", "正义", 0));
+        petData.add(new PetBean(10005, "狗", "正义", 1));
     }
 
     @Override

@@ -26,6 +26,7 @@ import com.example.petwear.R;
  */
 public class GPSFragment extends Fragment {
     private MapView mMapView = null;
+
     public GPSFragment() {
         // Required empty public constructor
     }
@@ -63,18 +64,21 @@ public class GPSFragment extends Fragment {
 
         return view;
     }
+
     @Override
     public void onResume() {
         super.onResume();
         //在activity执行onResume时执行mMapView. onResume ()，实现地图生命周期管理
         mMapView.onResume();
     }
+
     @Override
     public void onPause() {
         super.onPause();
         //在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
         mMapView.onPause();
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
