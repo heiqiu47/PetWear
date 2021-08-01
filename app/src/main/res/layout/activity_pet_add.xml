@@ -119,6 +119,7 @@
         android:id="@+id/brn_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/colorAccent"

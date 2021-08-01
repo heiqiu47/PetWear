@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,6 +32,12 @@ public class PetAddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_add);
         initView();
+        //标题栏修改
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setTitle("添加宠物");
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
         //切换宠物类型（设置图片）
         final String[] items = {"猫", "狗"};
         AlertDialog.Builder listDialog = new AlertDialog.Builder(PetAddActivity.this);
@@ -45,6 +52,12 @@ public class PetAddActivity extends AppCompatActivity {
             Toast.makeText(PetAddActivity.this, "未添加成功", Toast.LENGTH_SHORT).show();
             finish();
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return super.onSupportNavigateUp();
     }
 
     private void initView() {

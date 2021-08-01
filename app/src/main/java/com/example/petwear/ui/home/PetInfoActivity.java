@@ -1,8 +1,6 @@
 package com.example.petwear.ui.home;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,9 +22,9 @@ import com.example.petwear.tool.PetTool;
 public class PetInfoActivity extends AppCompatActivity {
 
     private ImageView mPetImg;
-    private RadioGroup mSexGroup;
-    private RadioButton mSex0Radio;
-    private RadioButton mSex1Radio;
+    private RadioGroup mGroupSex;
+    private RadioButton mRadioSex0;
+    private RadioButton mRadioSex1;
     private EditText mPetNameEdit;
     private TextView mPetNumber;
     private Button mBrnUpdate;
@@ -38,7 +36,7 @@ public class PetInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_info);
         initView();
-        mSex0Radio.setChecked(true);
+        mRadioSex0.setChecked(true);
         //标题栏修改
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
@@ -77,20 +75,20 @@ public class PetInfoActivity extends AppCompatActivity {
 
     }
 
-    private void initView() {
-        mPetImg = findViewById(R.id.pet_img);
-        mSexGroup = findViewById(R.id.sex_group);
-        mSex0Radio = findViewById(R.id.sex_0_radio);
-        mSex1Radio = findViewById(R.id.sex_1_radio);
-        mPetNameEdit = findViewById(R.id.pet_name_edit);
-        mPetNumber = findViewById(R.id.pet_number);
-        mBrnUpdate = findViewById(R.id.brn_update);
-        mBtnDelete = findViewById(R.id.btn_delete);
-    }
-
     @Override
     public boolean onSupportNavigateUp() {
         finish();
         return super.onSupportNavigateUp();
+    }
+
+    private void initView() {
+        mPetImg = findViewById(R.id.pet_img);
+        mGroupSex = findViewById(R.id.group_sex);
+        mRadioSex0 = findViewById(R.id.radio_sex_0);
+        mRadioSex1 = findViewById(R.id.radio_sex_1);
+        mPetNameEdit = findViewById(R.id.pet_name_edit);
+        mPetNumber = findViewById(R.id.pet_number);
+        mBrnUpdate = findViewById(R.id.brn_update);
+        mBtnDelete = findViewById(R.id.btn_delete);
     }
 }

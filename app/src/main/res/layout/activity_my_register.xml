@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.my.MyRegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="用户账号:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edit_nick_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <EditText
+        android:id="@+id/edit_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="昵称:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edit_phone_number"
+        app:layout_constraintEnd_toEndOf="@+id/edit_username"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edit_username"
+        app:layout_constraintTop_toBottomOf="@+id/edit_username" />
+
+    <EditText
+        android:id="@+id/edit_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="手机号:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edit_password"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nick_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edit_nick_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nick_name" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="密码:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/group_sex"
+        app:layout_constraintEnd_toEndOf="@+id/edit_phone_number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edit_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/edit_phone_number" />
+
+    <RadioGroup
+        android:id="@+id/group_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/radio_sex_1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password">
+
+        <RadioButton
+            android:id="@+id/radio_sex_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/radio_sex_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="女"
+            tools:layout_editor_absoluteX="195dp"
+            tools:layout_editor_absoluteY="454dp" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:text="注册"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

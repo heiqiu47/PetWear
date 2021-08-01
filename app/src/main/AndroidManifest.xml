@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.my.MyRegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.my.MyLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.my.MyFeedbackActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.petlist.PetAddActivity"
             android:exported="true" />
 
