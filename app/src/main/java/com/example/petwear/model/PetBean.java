@@ -1,4 +1,4 @@
-package com.example.petwear.bean;
+package com.example.petwear.model;
 
 //TODO 宠物数据
 public class PetBean {

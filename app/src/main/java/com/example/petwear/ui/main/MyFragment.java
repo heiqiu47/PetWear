@@ -31,6 +31,7 @@ import com.example.petwear.ui.petlist.PetListActivity;
  */
 public class MyFragment extends Fragment {
 
+    private LinearLayout mBtnUser;
     private ImageView mImgUser;
     private TextView mTextName;
     private LinearLayout mBtnInfo;
@@ -50,7 +51,7 @@ public class MyFragment extends Fragment {
         initView(view);
         //TODO 登录判断
         isLogin();
-        mImgUser.setOnClickListener(v -> loginStart(MyInfoActivity.class));
+        mBtnUser.setOnClickListener(v -> loginStart(MyInfoActivity.class));
         mBtnInfo.setOnClickListener(v -> loginStart(MyInfoActivity.class));
         mBtnPetsList.setOnClickListener(v -> loginStart(PetListActivity.class));
         mBtnPassword.setOnClickListener(v -> loginStart(MyPasswordActivity.class));
@@ -114,6 +115,7 @@ public class MyFragment extends Fragment {
     }
 
     private void initView(View view) {
+        mBtnUser = view.findViewById(R.id.btn_user);
         mImgUser = view.findViewById(R.id.img_user);
         mTextName = view.findViewById(R.id.text_name);
         mBtnInfo = view.findViewById(R.id.btn_info);

@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.petwear.R;
 
+/**
+ * 意见反馈
+ */
 public class MyFeedbackActivity extends AppCompatActivity {
 
     private EditText mEditFeedback;

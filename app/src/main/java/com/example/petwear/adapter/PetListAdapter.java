@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.petwear.R;
-import com.example.petwear.bean.PetBean;
+import com.example.petwear.model.PetBean;
 import com.example.petwear.tool.Utils;
 
 import java.util.List;
