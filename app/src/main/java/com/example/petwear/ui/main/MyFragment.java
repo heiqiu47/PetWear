@@ -89,6 +89,7 @@ public class MyFragment extends Fragment {
             mBtnUserInOut.setText("登录");
         } else {
             mBtnUserInOut.setText("退出账号");
+            mImgUser.setImageResource(R.drawable.user_girl);
             getInfoData();
         }
     }

@@ -45,9 +45,6 @@ public class HomeFragment extends Fragment {
         //点击宠物跳转至修改信息界面
         LinearLayout petInfo = view.findViewById(R.id.pet_info);
         petInfo.setOnClickListener(v -> startActivity(new Intent(getContext(), PetInfoActivity.class)));
-        //TODO 测试新界面
-        LinearLayout btnTest = view.findViewById(R.id.btn_test);
-        btnTest.setOnClickListener(v -> startActivity(new Intent(getContext(),TestMainActivity.class)));
         return view;
     }
 

@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.main.TestMainActivity"
-            android:exported="true" />
-        <activity
             android:name=".ui.my.MyPasswordActivity"
             android:exported="true" />
         <activity
