@@ -19,12 +19,12 @@
         android:layout_marginBottom="12dp"
         android:padding="16dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/img_user"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/user" />
+            tools:src="@drawable/user" />
 
         <LinearLayout
             android:layout_width="0dp"

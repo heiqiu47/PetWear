@@ -9,8 +9,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.petwear.R;
 import com.example.petwear.ui.home.PetInfoActivity;
 import com.example.petwear.ui.petlist.PetListActivity;
@@ -29,6 +33,10 @@ public class HomeFragment extends Fragment {
 
 
     private SwipeRefreshLayout mSwipeRefresh;
+    private LinearLayout mPetInfo;
+    private ImageView mPetImg;
+    private TextView mPetName;
+    private LinearLayout mBtnTest;
 
     public HomeFragment() {
     }
@@ -39,6 +47,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         initView(view);
+        setData();
         //TODO 刷新
         mSwipeRefresh.setColorSchemeResources(R.color.colorAccent);
         mSwipeRefresh.setOnRefreshListener(() -> refreshFruits());
@@ -50,7 +59,19 @@ public class HomeFragment extends Fragment {
 
     private void initView(View view) {
         mSwipeRefresh = view.findViewById(R.id.swipe_refresh);
+        mPetInfo = view.findViewById(R.id.pet_info);
+        mPetImg = view.findViewById(R.id.pet_img);
+        mPetName = view.findViewById(R.id.pet_name);
+        mBtnTest = view.findViewById(R.id.btn_test);
     }
+
+    //TODO 加载数据
+    private void setData() {
+        //加载图片
+        Glide.with(getContext()).load(R.drawable.cat)
+                .apply(RequestOptions.bitmapTransform(new CircleCrop())).into(mPetImg);
+    }
+
 
     //下拉刷新
     private void refreshFruits() {

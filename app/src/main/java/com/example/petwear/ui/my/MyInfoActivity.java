@@ -31,6 +31,7 @@ public class MyInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_info);
         initView();
+
         mRadioSex0.setChecked(true);
         //标题栏修改
         ActionBar supportActionBar = getSupportActionBar();

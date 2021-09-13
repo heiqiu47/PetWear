@@ -13,6 +13,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.petwear.R;
 import com.example.petwear.tool.Utils;
 
@@ -36,6 +39,8 @@ public class PetInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_info);
         initView();
+        Glide.with(this).load(R.drawable.dog)
+                .apply(RequestOptions.bitmapTransform(new CircleCrop())).into(mPetImg);
         mRadioSex0.setChecked(true);
         //标题栏修改
         ActionBar supportActionBar = getSupportActionBar();
@@ -49,9 +54,12 @@ public class PetInfoActivity extends AppCompatActivity {
         listDialog.setTitle("选择宠物类型");
         listDialog.setItems(items, (dialog, which) -> {
             petType = items[which];
-            mPetImg.setImageResource(Utils.getPetImg(petType));
+//            mPetImg.setImageResource(Utils.getPetImg(petType));
+            Glide.with(this).load(Utils.getPetImg(petType))
+                    .apply(RequestOptions.bitmapTransform(new CircleCrop())).into(mPetImg);
         });
         mPetImg.setOnClickListener(v -> listDialog.show());
+
 
         //TODO 修改宠物消息
         mBrnUpdate.setOnClickListener(v -> {

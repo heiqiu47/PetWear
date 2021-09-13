@@ -27,7 +27,7 @@
             android:layout_alignParentEnd="true"
             android:clickable="true"
             android:focusable="true"
-            app:srcCompat="@drawable/dog" />
+            tools:src="@drawable/dog" />
 
     </RelativeLayout>
 

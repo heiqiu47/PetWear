@@ -17,7 +17,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import com.example.petwear.MainActivity;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.petwear.R;
 import com.example.petwear.tool.Utils;
 import com.example.petwear.ui.my.MyFeedbackActivity;
@@ -49,6 +51,8 @@ public class MyFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
         initView(view);
+        Glide.with(getContext()).load(R.drawable.user)
+                .apply(RequestOptions.bitmapTransform(new CircleCrop())).into(mImgUser);
         //TODO 登录判断
         isLogin();
         mBtnUser.setOnClickListener(v -> loginStart(MyInfoActivity.class));

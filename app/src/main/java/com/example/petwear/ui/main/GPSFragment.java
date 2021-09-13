@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,10 +22,12 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.petwear.R;
 import com.example.petwear.ui.petlist.PetListActivity;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * GPS 界面
@@ -32,7 +35,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class GPSFragment extends Fragment {
     private MapView mBMapView;
     private LinearLayout mBtnPets;
-    private CircleImageView mPetImg;
+    private ImageView mPetImg;
     private TextView mPetName;
 
     public GPSFragment() {
@@ -45,6 +48,8 @@ public class GPSFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_g_p_s, container, false);
         initView(view);
+        Glide.with(getContext()).load(R.drawable.dog)
+                .apply(RequestOptions.bitmapTransform(new CircleCrop())).into(mPetImg);
         //TODO 宠物切换
         mBtnPets.setOnClickListener(v -> startActivity(new Intent(getContext(), PetListActivity.class)));
         //TODO 定位

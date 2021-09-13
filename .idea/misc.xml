@@ -37,6 +37,24 @@
         <entry key="..\:/Program/Android/AndroidStudioProjects/PetWear/app/src/main/res/menu/change_menu.xml" value="0.2682291666666667" />
         <entry key="..\:/Program/Android/AndroidStudioProjects/PetWear/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24722222222222223" />
         <entry key="..\:/Program/Android/AndroidStudioProjects/PetWear/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.24722222222222223" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/drawable-v24/edit_border.xml" value="0.16666666666666666" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/drawable/edit_border.xml" value="0.30104166666666665" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.30104166666666665" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.30104166666666665" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_main.xml" value="0.21422101449275363" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_my_feedback.xml" value="0.21422101449275363" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_my_info.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_my_login.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_my_password.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_my_register.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_pet_add.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_pet_info.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_pet_list.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/activity_test_main.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/fragment_g_p_s.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/fragment_home.xml" value="0.42857142857142855" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/fragment_my.xml" value="0.15052083333333333" />
+        <entry key="..\:/Program/Android/AndroidstudioProjects/PetWear/app/src/main/res/layout/item_pet_list.xml" value="0.21422101449275363" />
       </map>
     </option>
   </component>
